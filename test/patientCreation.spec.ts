@@ -1,5 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
+import { loginData } from '../utils/testData';
 import { PatientCreationPage } from '../pages/PatientCreationPage';
 
 
@@ -9,7 +10,7 @@ test('Patient Creation', async ({ page }) => {
 
 
 await login.navigate();
-await login.login('instaadmin@yopmail.com', 'Test@123');
+await login.login(loginData.email, loginData.password);
 
   await patient.navigateToPatientCreation();
 
