@@ -31,15 +31,15 @@ test('Booking Creation', async ({ page }) => {
   await page.locator('.input-field.p-autocomplete.p-component.p-inputwrapper.ng-untouched > .p-ripple').first().click();
   await page.getByRole('option', { name: '25 - Monitoring Vitals with' }).click();
   await page.getByLabel('Add New Booking').getByRole('combobox', { name: 'Date' }).click();
-  await page.getByText('10', { exact: true }).click();
+  await page.getByText('18', { exact: true }).click();
   await page.locator('#pn_id_8').getByRole('button', { name: 'dropdown trigger' }).click();
   await page.getByRole('option', { name: '20' }).click();
   await page.locator('#pn_id_9').getByRole('button', { name: 'dropdown trigger' }).click();
   await page.getByRole('option', { name: '30' }).click();
   await page.getByRole('textbox', { name: 'Partner Preferences *' }).click();
   await page.getByRole('textbox', { name: 'Partner Preferences *' }).fill('language known:tamil');
-  await page.locator("//input[@placeholder='Select Partner']").fill("gop");
-  await page.locator("//li[@aria-label='770 - Gopinath']").click();
+  await page.locator("//input[@placeholder='Select Partner']").fill("kar");
+  await page.locator("//li[@aria-label='763 - Karthik']").click();
    await page.waitForTimeout(1000); 
 
   await page.getByRole('button', { name: 'Book', exact: true }).click();
@@ -106,4 +106,34 @@ test('Patient Creation', async ({ page }) => {
   await page.waitForTimeout(2000);
   await page.getByRole('button', { name: 'Add Patient' }).click();
   await page.waitForTimeout(2000);
+});
+
+test('Create Service',async ({page})=>{
+  await page.goto('https://dev-admin.myinstacare.com/');
+  await page.getByRole('textbox', { name: 'Email' }).click();
+  await page.getByRole('textbox', { name: 'Email' }).fill('instaadmin@yopmail.com');
+  await page.getByRole('textbox', { name: 'Password' }).click();
+  await page.getByRole('textbox', { name: 'Password' }).fill('Test@123'); 
+  await page.getByRole('button', { name: 'Login' }).click();
+  await page.getByText('Services').click();
+  await page.getByRole('button', { name: 'New Service' }).click();  
+  await page.getByRole('textbox', { name: 'Enter Service Name' }).click();
+  await page.getByRole('textbox', { name: 'Enter Service Name' }).fill('Monitoring Vitals with Reporting');
+  await page.getByRole('combobox', { name: 'Select Category' }).click();
+  await page.getByRole('option', { name: 'Nursing' }).click();
+  await page.getByRole('combobox', { name: 'Select Complexity' }).click();
+  await page.getByRole('option', { name: 'Low' }).click();
+  await page.getByRole('textbox', { name: 'Duration' }).click();
+  await page.getByRole('textbox', { name: 'Duration' }).fill('30 Min');
+  await page.getByRole('textbox', { name: 'Description' }).click();
+  await page.getByRole('textbox', { name: 'Description' }).fill('Monitoring vitals with reporting to doctor');
+  await page.locator("//input[@formcontrolname='charge']").fill('500') ;
+  await page.getByRole('textbox',{name:'Commission'}).click();
+  await page.getByRole('textbox',{name:'Commission'}).fill('50');
+  await page.getByRole('textbox',{name:'Transport Charge'}).click();
+  await page.getByRole('textbox',{name:'Transport Charge'}).fill('100');
+  await page.waitForTimeout(2000);
+
+  await page.getByRole('button', { name: 'Add Service' }).click();
+
 });

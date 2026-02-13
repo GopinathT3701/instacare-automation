@@ -9,6 +9,7 @@ test('Booking Creation', async ({ page }) => {
   const login = new LoginPage(page);
   const booking = new BookingCreationPage(page);
 
+  await login.navigate();
   await login.login('instaadmin@yopmail.com', 'Test@123');
 
   await booking.navigate();

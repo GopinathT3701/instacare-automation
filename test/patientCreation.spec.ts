@@ -7,7 +7,9 @@ test('Patient Creation', async ({ page }) => {
   const login = new LoginPage(page);
   const patient = new PatientCreationPage(page);
 
-  await login.login('instaadmin@yopmail.com', 'Test@123');
+
+await login.navigate();
+await login.login('instaadmin@yopmail.com', 'Test@123');
 
   await patient.navigateToPatientCreation();
 
