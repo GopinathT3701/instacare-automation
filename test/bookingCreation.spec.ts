@@ -22,9 +22,9 @@ await booking.schedule.selectMinute('30');
 
 
   await booking.partner.enterPartnerPreference('language known: tamil');
-  await booking.partner.selectPartner('gop', '770 - Gopinath');
+  await booking.partner.selectPartner('kar', '763 - Karthik');
 
-  await booking.submit();
+ // await booking.submit();
 await page.waitForTimeout(5000); // Wait for 5 seconds to observe the result before closing the browser
 
 });
