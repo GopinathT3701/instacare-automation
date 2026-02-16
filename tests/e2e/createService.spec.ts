@@ -1,8 +1,8 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-import { ServicePage } from '../pages/ServicePage';
-import { ServiceFormSection } from '../Sections/Service/ServiceForm.section';
-import { loginData, serviceData } from '../utils/testData';
+import { LoginPage } from '../../pages/LoginPage';
+import { ServicePage } from '../../pages/ServicePage';
+import { ServiceFormSection } from '../../Sections/Service/ServiceForm.section';
+import { loginData, serviceData } from '../../utils/testData';
 
 test('Create Service', async ({ page }) => {
 
