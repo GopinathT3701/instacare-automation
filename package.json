@@ -6,7 +6,8 @@
   "scripts": {
     "test": "playwright test",
     "test:headed": "playwright test --headed",
-    "test:list": "playwright test --list"
+    "test:list": "playwright test --list",
+    "pretest": "node scripts/check-merge-conflicts.js"
   },
   "keywords": [],
   "author": "",
