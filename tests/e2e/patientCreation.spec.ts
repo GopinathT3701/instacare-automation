@@ -1,7 +1,12 @@
 import { test } from '@playwright/test';
+<<<<<<< HEAD:test/patientCreation.spec.ts
 import { LoginPage } from '../pages/LoginPage';
 import { loginData } from '../utils/testData';
 import { PatientCreationPage } from '../pages/PatientCreationPage';
+=======
+import { LoginPage } from '../../pages/LoginPage';
+import { PatientCreationPage } from '../../pages/PatientCreationPage';
+>>>>>>> b4e0bd514bdc954a9ce1da62c61baa7cb170069c:tests/e2e/patientCreation.spec.ts
 
 
 test('Patient Creation', async ({ page }) => {
