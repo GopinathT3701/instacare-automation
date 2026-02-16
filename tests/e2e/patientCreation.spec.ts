@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pages/LoginPage';
-import { PatientCreationPage } from '../pages/PatientCreationPage';
+import { LoginPage } from '../../pages/LoginPage';
+import { PatientCreationPage } from '../../pages/PatientCreationPage';
 
 
 test('Patient Creation', async ({ page }) => {
