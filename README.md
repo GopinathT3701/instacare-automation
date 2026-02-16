@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Instacare Automation
 
 This project follows a Playwright Page Object Model (POM) structure.
@@ -19,3 +20,6 @@ npm run test:headed
 ```
 
 > Note: Tests currently target `https://dev-admin.myinstacare.com/` and use credentials/data in test files and `utils/testData.ts`.
+=======
+# Instacare-automation
+>>>>>>> 08b687b9bea5bf335f1b59a88445ebdd296921d3

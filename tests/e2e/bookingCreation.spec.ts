@@ -1,12 +1,7 @@
 import { test } from '@playwright/test';
-<<<<<<< HEAD:test/bookingCreation.spec.ts
-import { LoginPage } from '../pages/LoginPage';
-import { BookingCreationPage } from '../pages/BookingCreationPage';
-import{ loginData } from '../utils/testData';
-=======
 import { LoginPage } from '../../pages/LoginPage';
 import { BookingCreationPage } from '../../pages/BookingCreationPage';
->>>>>>> b4e0bd514bdc954a9ce1da62c61baa7cb170069c:tests/e2e/bookingCreation.spec.ts
+import{ loginData } from '../../utils/testData';
 
 
 
