@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../../pages/LoginPage';
-import { BookingCreationPage } from '../../pages/BookingCreationPage';
+import { LoginPage } from '../pages/LoginPage';
+import { BookingCreationPage } from '../pages/BookingCreationPage';
 
 
 
